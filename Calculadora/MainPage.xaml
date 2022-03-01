@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Calculadora.MainPage">
+
+    <StackLayout>
+
+        <StackLayout BackgroundColor="Red" x:Name="cabecalho">
+            <Label Text="Calculadora" HorizontalOptions="Center" FontSize="25" FontAttributes="Bold" TextColor="AliceBlue"/>
+        </StackLayout>
+
+        <StackLayout BackgroundColor="DarkBlue">
+            <Label Text="Insira um Numero"/>
+            <Entry Placeholder="Qualquer Numero" x:Name="entNumero1" Keyboard="Numeric"/>
+            <Label Text="Insira Outro Numero"/>
+            <Entry Placeholder="Qualquer Numero" x:Name="entNumero2" Keyboard="Numeric"/>
+        </StackLayout>
+
+        <StackLayout Orientation="Horizontal" >
+            <Button Text="+" Clicked="btnSoma_Clicked" x:Name="btnSoma" HorizontalOptions="FillAndExpand"/>
+            <Button Text="-" Clicked="btnSubtracao_Clicked" x:Name="btnSubtracao" HorizontalOptions="FillAndExpand"/>
+            <Button Text="*" Clicked="btnMultiplicacao_Clicked" x:Name="btnMultiplicacao" HorizontalOptions="FillAndExpand"/>
+            <Button Text="/" Clicked="btnDivisao_Clicked" x:Name="btnDivisao" HorizontalOptions="FillAndExpand"/>
+        </StackLayout>
+
+        <StackLayout>
+            <Label Text="Resultado" />
+            <Entry x:Name="entResultado"/>
+        </StackLayout>
+
+        <StackLayout BackgroundColor="Black" HorizontalOptions="Center">
+            <Button Text="Limpar" x:Name="btnLimpar" Clicked="btnLimpar_Clicked"/>
+            <Button Text="Fechar" x:Name="btnFechar" Clicked="btnFechar_Clicked"/>
+        </StackLayout>
+
+    </StackLayout>
+
+</ContentPage>
